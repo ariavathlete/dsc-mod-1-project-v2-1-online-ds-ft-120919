@@ -1,5 +1,13 @@
 # Investigating Movie Data
 
+# Table Of Contents
+* [Purpose](#purpose)
+* [Data Description](#data-description)
+* [Question 1](#question-1-write-question-herequestion1ipynb)
+* [Wrap Up](#wrap-up)
+* [Future Work](#future-work)
+  
+
 <img src='images/kung-fu-panda.jpeg' width='80%'/>
 
 <!---
@@ -10,10 +18,10 @@
 ##### = h5
 --->
 
-## Purpose
+# Purpose
 write some purpose for investigation here
 
-## Data Description
+# Data Description
 list of files
 * tmdb.movies.csv.gz
 * tn.movies_budgets.csv.gz
@@ -86,4 +94,10 @@ def transform_table(df):
 |this is data for column 1 | this is data for columns 2 | |
 | more data for c1 | more data for c2 | data for c3|
 
+
+# Wrap up
+include your recommendations and a summary of your findings
+
+# Future Work
+* bullet list of things you plan on doing in the future
 
