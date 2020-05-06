@@ -1,4 +1,8 @@
 # Investigating Movie Data
+*add in hyperlinks to these items* 
+* blog link: 
+* video recording:
+* presentation.pdf: 
 
 # Table Of Contents
 * [Purpose](#purpose)
