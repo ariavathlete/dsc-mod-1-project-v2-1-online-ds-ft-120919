@@ -1,132 +1,89 @@
+# Investigating Movie Data
 
-# Data Science - The Story of a Hollywood Hero
+<img src='images/kung-fu-panda.jpeg' width='80%'/>
 
-![](images/star-wars.jpg)
+<!---
+# = h1
+## = h2
+### = h3
+#### = h4
+##### = h5
+--->
 
-[Information on creating hyperlinks in jupyter found here](https://sebastianraschka.com/Articles/2014_ipython_internal_links.html) 
+## Purpose
+write some purpose for investigation here
 
-Adding anchors will make hyperlinking waaaayyy easier
+## Data Description
+list of files
+* tmdb.movies.csv.gz
+* tn.movies_budgets.csv.gz
 
-convert notebook using the following command
+<!--- Q1 without dropdown--->
+## [Question 1: {Write question here}](./Question1.ipynb)
 
-`jupyter nbconvert --to markdown notebookname.ipynb`
+### Tables Used
+* table goes here
 
+### EDA
+<img src='images/q1-barchart.png'/>
 
-### Outline
-* [Goals and Overview](##goals-and-overview)
-* [Final Thoughts](#final)
+### Conclusion
+write some conclusion/findings here
 
-## Goals and Overview
-
-In this project, I was given multiple datasets
-* /zippedData/tmdb.movies.csv
-* /zippedData/imdb.title.crew.csv
-* /zippedData/tn.movie_budgets.csv
-* /zippedData/imdb.title.ratings.csv
-* /zippedData/imdb.name.basics.csv
-* /zippedData/imdb.title.principals.csv
-* /zippedData/imdb.title.akas.csv
-* /zippedData/bom.movie_gross.csv
-* /zippedData/imdb.title.basics.csv
-
-The goal of this project is to find at least 5 insights in this data by joining tables in creative and fun ways (but also useful ways).
-
-
-------
-
-<details><summary><span style="font-size:18pt; font-weight:bold">Q1: Is there any pattern in the cast of the top 5 highest profitable movies?</span><br><span style="font-size:14pt">(Extended question): Is there any relationship between genres?</span></summary>
+### Recommendation
+write recommendation here
 
 
+<!--- Q1 with dropdown--->
+<details><summary style="font-size: 24px"> Question 1:{Write question here} </summary>
 
-# Exploration (EDA)
-In the image below, we can see that the top highest grossing movies when compared to their production budget movies are: 
-* Avatar 
-* Titanic
-* Avengers: Infinity War
-* Star Wars Ep. VII: The Force Awakens
-* Jurassic World
+### Tables Used
+* table goes here
 
-I decided to look at the distribution of **genres** across the **top 50** movies
+### EDA
+<img src='images/q1-barchart.png'/>
 
-# Some code I used to aggregate the genres by counts
+### Conclusion
+write some conclusion/findings here
 
-```python
-genre_count = {}
-for movie in top_5_budget_gross_diff_movies:
-    movie_genres = joined_df[joined_df['movie']==movie]['genres'].values[0]
-    try:
-        for genre in movie_genres:
-            genre_count[genre] = genre_count.get(genre, 0) + 1
-    except:
-        genre_count['not_listed'] = genre_count.get('not_listed', 0) + 1
+### Recommendation
+write recommendation here
 
-genre_count
-```
-
-![](images/q1-barchart.png)
 </details>
 
-### Q1: Insights/Findings/Recommendations
 
-**Findings**
+### How do I bold text?
+this text is now **bold** 
+`this text is now **bold** `
 
-After examining the top 50 movies for gross/budget difference, I found that the most represented genres were *Adventures, Action and Sci-Fi*.  Of the top 50 movies, 15 movies did not have genre data available. The lowest represented genres were *Romance, Music, Biography, Horror*.  
+### How do I italicize text?
+this text is now *italicized*
+`this text is now *italicized* `
 
-**Recommendations**
-* Collect genre information for all movies
-* If creating a movie in the lowest performing genres, do not expect to gross over the budget.  
-* If aiming at high gross, create action adventures movies.
+### How do I do both?
+this text is now ***bold and italicized***
+`this text is now ***bold and italicized***`
 
-
-**Next Steps**
-* Plan on adding directors, actors, seasons to this data to see if anything else correlates with high performance.  
-* If possible, gather missing movie information.
-
------
-
-
-```python
+### How to make a codeblock
+use '```' on both sides of codeblock
 
 ```
-
-
-```python
-
+def transform_table(df):
+    return df_transformed
 ```
 
+you can also add language specific syntax highlighting
 
 ```python
-
+def transform_table(df):
+    return df_transformed
 ```
 
+### How do I make a table? 
 
-```python
-
-```
-
-
-```python
-
-```
+|column 1 | column 2| column 3|
+|:-------:|:-------:|:-------:| 
+|this is data for column 1 | this is data for columns 2 | |
+| more data for c1 | more data for c2 | data for c3|
 
 
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-## Final Thoughts  <a class="anchor" id="final"></a>
-
-
-```python
-
-```
